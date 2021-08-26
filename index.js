@@ -1,48 +1,66 @@
-//  document.addEventListener("keydown", function(event) {
-//      console.log(event);
-//    }); 
-//  
-//    document.addEventListener("keydown", function(event) {
-//      if (event.key === "ArrowLeft") {
-//        const leftNumbers = dodger.style.left.replace("px", "");
-//        const left = parseInt(leftNumbers, 10);
-//    
-//        dodger.style.left = `${left - 1}px`;
-//      }
-//    }); 
 
-const dodger = document.getElementById("dodger");  
+// const dodger = document.getElementById("dodger");  
+// 
+// function moveDodgerLeft() {
+//     const leftNumbers = dodger.style.left.replace("px", "");
+//     const left = parseInt(leftNumbers, 10);
+//   
+//     if (left > 0) {
+//       dodger.style.left = `${left - 1}px`;
+//     }
+//   } 
+// 
+//   document.addEventListener("keydown", function(e) {
+//     if (e.key === "ArrowLeft") {
+//       moveDodgerLeft();
+//     }
+//   }); 
+// 
+//   //////////
+// 
+// 
+//   function moveDodgerRight() {
+//     const leftNumbers = dodger.style.left.replace("px", "");
+//     const left = parseInt(leftNumbers, 10);
+//   
+//     if (left > 0) {
+//       dodger.style.left = `${left + 1}px`;
+//     }
+//   } 
+// 
+//   document.addEventListener("keydown", function(e) {
+//     if (e.key === "ArrowRight") {
+//       moveDodgerRight();
+//     }
+//   }); 
 
 function moveDodgerLeft() {
-    const leftNumbers = dodger.style.left.replace("px", "");
-    const left = parseInt(leftNumbers, 10);
-  
-    if (left > 0) {
-      dodger.style.left = `${left - 1}px`;
-    }
-  } 
+  const leftNumbers = dodger.style.left.replace("px", "");
+  const left = parseInt(leftNumbers, 10);
 
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "ArrowLeft") {
-      moveDodgerLeft();
-    }
-  }); 
+  if (left > 0) {
+    dodger.style.left = `${left - 1}px`;
+  }
+}
 
-  //////////
+document.addEventListener("keydown", function(e) {
+  if (e.key === "ArrowLeft") {
+    moveDodgerLeft();
+  }
+});
 
+function moveDodgerRight() {
+  const leftNumbers = dodger.style.left.replace("px", "");
+  const left = parseInt(leftNumbers, 10);
 
-  function moveDodgerRight() {
-    const leftNumbers = dodger.style.left.replace("px", "");
-    const left = parseInt(leftNumbers, 10);
-  
-    if (left > 0) {
-      dodger.style.left = `${left + 1}px`;
-    }
-  } 
+  if (left > 0){
+    dodger.style.left = `${left + 1}px`
+  }
 
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "ArrowRight") {
-      moveDodgerRight();
-    }
-  }); 
+}
 
+document.addEventLister("keydown", function (e) {
+  if (e.key === "ArrowRight") {
+    moveDodgerRight();
+  }
+})
